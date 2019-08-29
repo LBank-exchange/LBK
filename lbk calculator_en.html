@@ -64,11 +64,15 @@
             let ccc = 0;
             // debugger
             while (c > 0){
-              if(ch.checked){
+              if(ch.checked && (a !==bbb) ){
                 bbb = 0;
               }
               ccc = computer(a,bbb,d)
-              bbb = bbb + ccc;
+              if ( a !== bbb ){
+                bbb = bbb + ccc;
+              } else {
+                bbb = a;
+              }
               o = o + 1;
               c = c - ccc;
             }
